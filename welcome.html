@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to my website</title>
+    </head>
+    <body>
+        <h1>Welcome <strong>{{email}}</strong>!</h1>
+            <p>It is now {{ datetime }}</p>
+        <h2>Add friends/conjoint.</h2>
+            <ul>
+                <li><a href='https://pdelespa.sbslab.be/add'>Add friends.</a></li>
+                <li><a href='https://pdelespa.sbslab.be/conjoint'>Add conjoint.</a></li>
+            </ul>
+        <h2><a href='https://pdelespa.sbslab.be/message'>Post your message.</a></h2>
+            <ul>
+                {%for m in message%}
+               <li><p>{{m.publication_date}}  {{m.author}} a dit :</p>
+                   <p>      {{m.content}}</p>
+                </li>
+                {%endfor%}
+            </ul>
+        <h3 style="text-align:center;"><a href="https://pdelespa.sbslab.be/listoffriends">List of friends </a></h3>
+        <h2 style="text-align:right;"><a href='https://pdelespa.sbslab.be/disconnect'>Disconnect</a></h2>
+</body>
+</html> 
